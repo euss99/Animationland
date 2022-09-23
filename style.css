@@ -1,3 +1,4 @@
+/* Index */
 body {
     counter-reset: game; /* Crea o reinicia un contador */
 }
@@ -8,4 +9,127 @@ input:checked {
     /*content inserta el contenido generado (debe usarse con un pseudoelemento)*/
     /* counter() es una función que agrega el valor de un contenedor a un elemento */
     content: counter(game);
+}
+/* Contexto de apilamiento */
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.phone {
+    width: 300px;
+    height: 600px;
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    background: #CCEFFF;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.layer {
+    position: absolute;
+}
+.layer-1 {
+    z-index: 1;
+    height: 450px;
+    width: 80px;
+    background: white;
+    bottom: 0;
+    right: 60px;
+    border: 1px solid black;
+}
+.layer-2 {
+    z-index: 2;
+    height: 450px;
+    width: 80px;
+    background: white;
+    bottom: 0;
+    left: 60px;
+    border: 1px solid black;
+}
+.layer-3 {
+    z-index: 3;
+    height: 410px;
+    width: 225px;
+    background: green;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+.layer-4 {
+    z-index: 4;
+    height: 350px;
+    width: 80px;
+    background: white;
+    bottom: 0;
+    left: 20px;
+    border: 1px solid black;
+    
+}
+.layer-5 {
+    z-index: 5;
+    height: 310px;
+    width: 200px;
+    background: green;
+    left: 0;
+    bottom: 0;
+    border: 1px solid black;
+    border-bottom-left-radius: 30px;
+}
+.layer-6 {
+    z-index: 6;
+    height: 220px;
+    width: 80px;
+    background: white;
+    bottom: 0;
+    left: 205px;
+    border: 1px solid black;
+    border-bottom-right-radius: 30px;
+}
+.layer-7 {
+    z-index: 7;
+    height: 170px;
+    width: 160px;
+    background: green;
+    left: 138px;
+    bottom: 0;
+    border: 1px solid black;
+    border-bottom-right-radius: 30px;
+}
+.layer-8 {
+    z-index: 9;
+    height: 100px;
+    width: 120px;
+    background: red;
+    left: 0px;
+    bottom: 0;
+    border: 1px solid black;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.layer-9 {
+    z-index: 8;
+    height: 135px;
+    width: 120px;
+    background: wheat;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.layer-10 {
+    z-index: 10;
+    height: 100px;
+    width: 120px;
+    background: red;
+    left: 178px;
+    bottom: 0;
+    border: 1px solid black;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
 }
