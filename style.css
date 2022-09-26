@@ -32,21 +32,50 @@ body {
 }
 .layer-1 {
     z-index: 1;
-    height: 450px;
+    height: 465px;
     width: 80px;
-    background: white;
     bottom: 0;
     right: 60px;
-    border: 1px solid black;
+
+    animation-name: jump; /* Función para nombrar a la animación y llamarla con los keyframes */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
+@keyframes jump {
+    0% {
+        height: 465px;
+    }
+    50% {
+        height: 410px;
+    }
+    100% {
+        height: 465px;
+    }
+}
+
 .layer-2 {
     z-index: 2;
     height: 450px;
     width: 80px;
-    background: white;
     bottom: 0;
     left: 60px;
-    border: 1px solid black;
+
+    animation-name: jump; /* Función para nombrar a la animación y llamarla con los keyframes */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes jump {
+    0% {
+        height: 465px;
+    }
+    50% {
+        transform: translate(0, 5px);
+        height: 410px;
+    }
+    100% {
+        transform: translate(0px ,0px);
+        height: 465px;
+    }
 }
 .layer-3 {
     z-index: 3;
@@ -57,37 +86,61 @@ body {
     right: 0;
     bottom: 0;
     margin: 0 auto;
-    border: 1px solid black;
+    border-radius: 20px;
 }
 .layer-4 {
     z-index: 4;
-    height: 350px;
+    height: 365px;
     width: 80px;
-    background: white;
     bottom: 0;
     left: 20px;
-    border: 1px solid black;
-    
+
+    animation-name: jump1; /* Función para nombrar a la animación y llamarla con los keyframes */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes jump1 {
+    0% {
+        height: 365px;
+    }
+    50% {
+        height: 310px;
+    }
+    100% {
+        height: 365px;
+    }
 }
 .layer-5 {
     z-index: 5;
     height: 310px;
     width: 200px;
-    background: green;
+    background: rgb(7, 146, 7);
     left: 0;
     bottom: 0;
-    border: 1px solid black;
+    border-radius: 20px;
     border-bottom-left-radius: 30px;
 }
 .layer-6 {
     z-index: 6;
-    height: 220px;
+    height: 225px;
     width: 80px;
-    background: white;
     bottom: 0;
     left: 205px;
-    border: 1px solid black;
-    border-bottom-right-radius: 30px;
+
+    animation-name: jump2; /* Función para nombrar a la animación y llamarla con los keyframes */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes jump2 {
+    0% {
+        height: 225px;
+    }
+    50% {
+        height: 170px;
+    }
+    100% {
+        height: 225px;
+    }
 }
 .layer-7 {
     z-index: 7;
@@ -96,8 +149,7 @@ body {
     background: green;
     left: 138px;
     bottom: 0;
-    border: 1px solid black;
-    border-bottom-right-radius: 30px;
+    border-radius: 30px;
 }
 .layer-8 {
     z-index: 9;
@@ -106,7 +158,6 @@ body {
     background: red;
     left: 0px;
     bottom: 0;
-    border: 1px solid black;
     border-bottom-left-radius: 30px;
     border-top-right-radius: 30px;
 }
@@ -129,7 +180,98 @@ body {
     background: red;
     left: 178px;
     bottom: 0;
-    border: 1px solid black;
     border-bottom-right-radius: 30px;
     border-top-left-radius: 30px;
+}
+/* bunny */
+.left-ear--outer {
+    background: wheat;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+}
+.left-ear--inner {
+    background: pink;
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top: 8px;
+}
+.right-ear--outer {
+    background: wheat;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+}
+.right-ear--inner {
+    background: pink;
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+}
+.head {
+    background: wheat;
+    width: 100%;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 25px;
+}
+.head__eye {
+    background: black;
+    border-radius: 50px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 20px;
+
+    animation-name: blink; /* Función para nombrar a la animación y llamarla con los keyframes */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    0% {
+        height: 5px;
+    }
+    5% {
+        transform: translate(0, 2px);
+        height: 1px;
+    }
+    10% {
+        transform: translate(0px ,0px);
+        height: 5px;
+    }
+}
+
+.head__eye--left {
+    left: 25px;
+}
+.head__eye--right {
+    right: 25px;
+}
+/* wall */
+.wall--gren {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    height: 30px;
+    background: linear-gradient(135deg, #408b40 25%, transparent 25%) -50px 0,
+                linear-gradient(-135deg, #408b40 25%, transparent 25%) -50px 0,
+                linear-gradient(45deg, #408b40 25%, transparent 25%),
+                linear-gradient(-45deg, #408b40 25%, transparent 25%);
+    background-size: 30px 80px;
+    border-radius: 20px;
 }
