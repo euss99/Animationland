@@ -5,5 +5,5 @@
 - Al igual que aprendí a como hacer un contador solamente con HTML y CSS.
 
 <p align="center"> 
-    <img  src="https://imagizer.imageshack.com/img922/9360/xGdlQD.gif" width="400" heigth="250">
+    <img  src="https://imagizer.imageshack.com/img922/9360/xGdlQD.gif" width="200" heigth="350">
 </p>
